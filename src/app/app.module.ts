@@ -9,13 +9,15 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { StarComponent } from './components/star/star.component';
 import { AdminRoutes } from './routes/admin.routing';
+import { CountdownComponent } from './countdown/countdown.component';
 const routes: Routes = [
   { path: 'list', component: ListComponent },
   {path: 'productDetail', component: ProductDetailComponent, children:[
     { path: ':id', component: ProductDetailComponent }
   ]},
+  { path: 'countdown', component: CountdownComponent},
   { path: '', pathMatch: 'full', redirectTo: 'list' },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
   // { path: 'productDetail/:id', component: ProductDetailComponent },
 ];
 @NgModule({
@@ -24,6 +26,7 @@ const routes: Routes = [
     ListComponent,
     ProductDetailComponent,
     StarComponent,
+    CountdownComponent,
   ],
   imports: [BrowserModule, FormsModule, AdminRoutes, RouterModule.forRoot(routes)],
   providers: [],
