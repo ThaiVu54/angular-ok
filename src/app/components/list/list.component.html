@@ -14,8 +14,8 @@
       </thead>
       <tbody>
         <tr *ngFor="let product of products">
-          <td scope="row">{{product.productCode}}</td>
-          <td >{{product.productName}}</td>
+          <td scope="row">{{product.productCode.toUpperCase()}}</td>
+          <td >{{product.productName.toUpperCase()}}</td>
           <td>
             <app-star [rating]="5" (ratingClicked)="changStarRating($event)"></app-star>
           </td>

@@ -20,6 +20,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
+
   changStarRating(message: string){
     console.log(`message: ${message}`);
 
